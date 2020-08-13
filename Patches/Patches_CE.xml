@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Combat Extended</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseGrenadeProjectile">
+              <defName>Bullet_FireExtFoam</defName>
+              <label>Fire Extinguisher Foam</label>
+              <graphicData>
+                <texPath>Things/Projectile/Ext_Spray/Ext_Spray</texPath>
+                <graphicClass>Graphic_Single</graphicClass>
+                <shaderType>TransparentPostLight</shaderType>
+              </graphicData>
+              <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+              <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                <damageDef>FExtExtinguish</damageDef>
+                <!-- <damageAmountBase>50</damageAmountBase> -->
+                <speed>30</speed>
+                <explosionRadius>2.5</explosionRadius>
+                <flyOverhead>false</flyOverhead>
+                <soundExplode>DispensePaste</soundExplode>
+                <postExplosionSpawnThingDef>Filth_FireFoam</postExplosionSpawnThingDef>
+                <postExplosionSpawnChance>1</postExplosionSpawnChance>
+                <postExplosionSpawnThingCount>3</postExplosionSpawnThingCount>
+                <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+              </projectile>
+            </ThingDef>
+          </value>
+        </li>
+        <!-- FE Compat -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Gun_Fire_Ext"]</xpath>
+          <value>
+            <ThingDef ParentName="FireExtMakeableGun">
+              <defName>Gun_Fire_Ext</defName>
+              <label>Fire Extinguisher</label>
+              <description>Fire Fighting Equipment</description>
+              <graphicData>
+                <texPath>Things/Item/Gun_Fire_Ext</texPath>
+                <graphicClass>Graphic_Single</graphicClass>
+              </graphicData>
+              <recipeMaker>
+                <researchPrerequisite>FireExt</researchPrerequisite>
+                <skillRequirements>
+                  <Crafting>4</Crafting>
+                </skillRequirements>
+                <recipeUsers>
+                  <li>TableMachining</li>
+                </recipeUsers>
+              </recipeMaker>
+              <costList>
+                <Steel>50</Steel>
+                <ComponentIndustrial>2</ComponentIndustrial>
+              </costList>
+              <soundInteract>Interact_Grenade</soundInteract>
+              <techLevel>Industrial</techLevel>
+              <generateCommonality>0.05</generateCommonality>
+              <weaponTags Inherit="False">
+                <li>FireExt_NotUsed</li>
+              </weaponTags>
+              <thingCategories>
+                <li>Manufactured</li>
+              </thingCategories>
+              <tradeTags>
+                <li>Exotic</li>
+              </tradeTags>
+              <statBases>
+                <WorkToMake>5000</WorkToMake>
+                <SightsEfficiency>1.0</SightsEfficiency>
+                <ShotSpread>0.01</ShotSpread>
+                <SwayFactor>1</SwayFactor>
+                <Bulk>2</Bulk>
+                <Mass>2</Mass>
+                <MaxHitPoints>100</MaxHitPoints>
+                <Flammability>0.05</Flammability>
+                <SellPriceFactor>0.5</SellPriceFactor>
+                <DeteriorationRate>1</DeteriorationRate>
+                <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+              </statBases>
+              <verbs>
+                <li Class="CombatExtended.VerbPropertiesCE">
+                  <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                  <hasStandardCommand>True</hasStandardCommand>
+                  <defaultProjectile>Bullet_FireExtFoam</defaultProjectile>
+                  <warmupTime>1.5</warmupTime>
+                  <range>12</range>
+                  <burstShotCount>3</burstShotCount>
+                  <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                  <soundCast>DispensePaste</soundCast>
+                  <soundCastTail>GunTail_Light</soundCastTail>
+                  <muzzleFlashScale>1</muzzleFlashScale>
+                  <!-- <forcedMissRadius>3</forcedMissRadius> -->
+                  <targetParams>
+                    <canTargetLocations>True</canTargetLocations>
+                  </targetParams>
+                  <ai_IsBuildingDestroyer>False</ai_IsBuildingDestroyer>
+                  <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+                </li>
+              </verbs>
+              <comps>
+                <li Class="CombatExtended.CompProperties_FireModes">
+                  <aiUseBurstMode>False</aiUseBurstMode>
+                  <aiAimMode>Snapshot</aiAimMode>
+                  <aimedBurstShotCount>3</aimedBurstShotCount>
+                </li>
+              </comps>
+              <tools>
+                <li Class="CombatExtended.ToolCE">
+                  <label>stock</label>
+                  <capacities>
+                    <li>Blunt</li>
+                  </capacities>
+                  <power>5</power>
+                  <cooldownTime>1.8</cooldownTime>
+                  <armorPenetration>0.5</armorPenetration>
+                  <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                </li>
+                <li Class="CombatExtended.ToolCE">
+                  <label>barrel</label>
+                  <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                  </capacities>
+                  <power>5</power>
+                  <cooldownTime>2.5</cooldownTime>
+                  <armorPenetration>0.5</armorPenetration>
+                  <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                </li>
+              </tools>
+            </ThingDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="FFoamBeltApparelBase" Abstract="True">
+    <thingClass>FireExt.FireFoamBelt</thingClass>
+    <tickerType>Normal</tickerType>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <category>Item</category>
+    <selectable>True</selectable>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Beauty>-3</Beauty>
+    </statBases>
+    <apparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+        <li>BeltFireDefensePop</li>
+      </tags>
+    </apparel>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+      <researchPrerequisite>Firefoam</researchPrerequisite>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="FFoamBeltApparelBase">
+    <defName>FireFoam_Belt</defName>
+    <label>Fire foam belt</label>
+    <description>An automatic single-use defensive belt used to put out fires. It can be triggered when close to fire or when the wearer becomes alight.</description>
+    <costList>
+      <ComponentIndustrial>1</ComponentIndustrial>
+      <Steel>20</Steel>
+      <Chemfuel>30</Chemfuel>
+    </costList>
+    <graphicData>
+      <texPath>Things/Item/FireFoam_Belt/FireFoam_Belt</texPath>
+    </graphicData>
+    <statBases>
+      <WorkToMake>750</WorkToMake>
+      <Mass>2.0</Mass>
+      <Flammability>0.0</Flammability>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <generateAllowChance>0.10</generateAllowChance>
+    <comps>
+      <li Class="FireExt.CompProperties_FFoamBelt">
+        <FoamUses>1</FoamUses>
+        <FoamRadius>5.0</FoamRadius>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

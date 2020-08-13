@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchTabDef>
+    <defName>FireExtTab</defName>
+    <label>Fire Extinguisher</label>
+  </ResearchTabDef>
+  <ResearchProjectDef>
+    <defName>FireExt</defName>
+    <label>Fire Extinguisher</label>
+    <description>Grants the ability to use a fire extinguisher.</description>
+    <baseCost>300</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Firefoam</li>
+      <li>Machining</li>
+    </prerequisites>
+    <tab>FireExtTab</tab>
+  </ResearchProjectDef>
+</Defs>

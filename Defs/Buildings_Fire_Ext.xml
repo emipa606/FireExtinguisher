@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>FExt_Shelf</defName>
+    <label>Fire Extinguisher Shelf</label>
+    <description>Fire extinguishers stored in this will not deteriorate, even if outside.</description>
+    <thingClass>Building_Storage</thingClass>
+    <designationCategory>Misc</designationCategory>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <tickerType>Normal</tickerType>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/Misc/FExt_Shelf/FExt_Shelf</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <size>(1,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>5</pathCost>
+    <fillPercent>0.10</fillPercent>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>10</costStuffCount>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>5</Mass>
+      <WorkToBuild>240</WorkToBuild>
+      <Flammability>0.1</Flammability>
+    </statBases>
+    <building>
+      <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <fixedStorageSettings>
+        <filter>
+          <thingDefs>
+            <li>Gun_Fire_Ext</li>
+          </thingDefs>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Critical</priority>
+        <filter>
+          <thingDefs>
+            <li>Gun_Fire_Ext</li>
+          </thingDefs>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <designationHotKey>Misc12</designationHotKey>
+    <surfaceType>Item</surfaceType>
+    <rotatable>true</rotatable>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <canOverlapZones>false</canOverlapZones>
+    <researchPrerequisites>
+      <li>FireExt</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>FExt_CeilingFoamPopper</defName>
+    <label>Ceiling firefoam popper</label>
+    <description>When it detects fire, this safety device pops and sprays a fire-retardant foam in a circular field around itself on the floor. Can also be triggered manually.</description>
+    <graphicData>
+      <texPath>Things/Building/Misc/FExt_CeilingFoamPopper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(1.0,1.0,1.0,0.4)</color>
+      <shaderType>Transparent</shaderType>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>9.9</explosiveRadius>
+        <explosiveDamageType>FExtExtinguish</explosiveDamageType>
+        <startWickHitPointsPercent>-1</startWickHitPointsPercent>
+        <startWickOnDamageTaken>
+          <li>Flame</li>
+        </startWickOnDamageTaken>
+        <postExplosionSpawnThingDef>Filth_FExtFireFoam</postExplosionSpawnThingDef>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingCount>1</postExplosionSpawnThingCount>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <explosionEffect>ExtinguisherExplosion</explosionEffect>
+      </li>
+      <li Class="CompProperties_Usable">
+        <useJob>TriggerFirefoamPopper</useJob>
+        <useLabel>Trigger firefoam popper</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_StartWick</compClass>
+      </li>
+      <li Class="CompProperties_ProximityFuse">
+        <target>Fire</target>
+        <radius>4</radius>
+      </li>
+      <li Class="CompProperties_Glower">
+        <!--<overlightRadius>5.0</overlightRadius>-->
+        <glowRadius>8</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>20</basePowerConsumption>
+      </li>
+      <li Class="FireExt.CompProperties_CeilingPopper" />
+    </comps>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <passability>Standable</passability>
+    <blockWind>false</blockWind>
+    <clearBuildingArea>false</clearBuildingArea>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>8</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>-8</Beauty>
+    </statBases>
+    <fillPercent>0</fillPercent>
+    <costList>
+      <Steel>65</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <specialDisplayRadius>9.9</specialDisplayRadius>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <pathCost>0</pathCost>
+    <designationCategory>Misc</designationCategory>
+    <rotatable>false</rotatable>
+    <designationHotKey>Misc7</designationHotKey>
+    <researchPrerequisites>
+      <li>FireExt</li>
+    </researchPrerequisites>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <isInert>true</isInert>
+      <isEdifice>false</isEdifice>
+    </building>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <placeWorkers>
+      <li>FireExt.PlaceWorker_CeilingPopper</li>
+    </placeWorkers>
+  </ThingDef>
+</Defs>
