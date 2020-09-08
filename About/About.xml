@@ -18,6 +18,7 @@
   </modDependencies>
   <loadAfter>
     <li>brrainz.harmony</li>
+    <li>CETeam.CombatExtended</li>
   </loadAfter>
   <description>Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2002292418
