@@ -20,23 +20,26 @@
     <li>brrainz.harmony</li>
     <li>CETeam.CombatExtended</li>
   </loadAfter>
-  <description>Update of peladors mod
+  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2002292418
 
-[img]https://i.imgur.com/GYswkZ7.png[/img]
+[img]https://i.imgur.com/7Gzt3Rg.png[/img]
 
-Support-chat:
-https://invite.gg/mlie
-
-Non-steam version:
-https://github.com/emipa606/FireExtinguisher
+[table]
+	[tr]
+		[td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+		[td][url=https://github.com/emipa606/FireExtinguisher][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+	[/tr]
+[/table]
 	
---- Original Description ---
-Overview
+[img]https://i.imgur.com/NOW7jU1.png[/img]
+
+[h1]Overview[/h1] V1.1
 
 Adds a useful pawn firefighting tool.
 
-Details
+[h1]Details[/h1]
 
 Requires Fire Extinguisher (FE) research (own tab). Made at Machining table with a recipe of: 50 steel and 2 Components.
 
@@ -46,9 +49,9 @@ Includes a dedicated shelf (found in Misc tab on the architect menu) for use. Re
 
 (Please see brief demo/tutorial video above.)
 
-Mod Notes
+[h1]Mod Notes[/h1]
 
-Since the mechanics of the fire extinguisher is a "gun" it cannot be used by pacifist pawns, though funnily enough this can be used by pyromaniacs.
+Since the mechanics of the fire extinguisher is a "gun" it cannot be used by pacifist pawns, though funnily enough this can be used by pyromaniacs. 
 
 Classified as a manufactured item.
 
@@ -56,22 +59,40 @@ Works with existing saves and should be mod friendly. To remove the mod you will
 
 When changing the values in the mod options you will need to restart Rimworld in order for the changes to take effect.
 
-Fire Foam Belt
+[h1]Fire Foam Belt[/h1]
 
 A fire foam belt is included with the mod that will trigger if the wearer or the belt itself is set on fire. Similarly it can be manually triggered if in close proximity to a fire. (Available to be made at the Machining table after fire foam research).
 
-Expansion
-*** Subject to conversion ***
+[h1]Expansion[/h1] *** Subject to conversion ***
 
-Fire Warden - AI behaviour for tackling fires with the extinguisher.
-https://steamcommunity.com/sharedfiles/filedetails/?id=2002295141
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2002295141]Fire Warden[/url] - AI behaviour for tackling fires with the extinguisher.
 
-Credits
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2007567373]Simple Sidearms Temporary Fix[/url] - Ensures that the FE is not selected during combat.
+
+[h1]Credits[/h1]
 
 1) Similar idea to previous authors of similar mods in earlier game versions.
 2) Razzoriel: Heads up regarding removal of camera shake effect.
 3) SheiFoxy and Rainbeau Flambe: Reverse engineered a mod of theirs to understand mod options method.
 
+[h1]*** Converting from V1.0 to V1.1 ***[/h1] IMPORTANT
 
-(CC BY-NC-SA 4.0)</description>
+Note if converting from V1.0 to V1.1 and you haven't flushed your config data for the mod then you will receive an error.
+
+Instructions below how to remove the mod options file for V1.0 FE.
+
+(CC BY-NC-SA 4.0)
+
+
+[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]
+</description>
 </ModMetaData>
+
