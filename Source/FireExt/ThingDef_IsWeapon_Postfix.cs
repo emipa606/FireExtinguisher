@@ -9,6 +9,11 @@ namespace FireExt
         [HarmonyPostfix]
         public static void Postfix(ref ThingDef __instance, ref bool __result)
         {
+            if (ModLister.GetActiveModWithIdentifier("PeteTimesSix.SimpleSidearms") != null)
+            {
+                return;
+            }
+
             Controller.LastWeaponCheckType = __instance.defName;
             if (__instance.defName != "Gun_Fire_Ext")
             {
