@@ -9,7 +9,7 @@ namespace FireExt
         [HarmonyPostfix]
         public static void Postfix(WorkTags w, ref Pawn __instance, ref bool __result)
         {
-            if (ModLister.GetActiveModWithIdentifier("PeteTimesSix.SimpleSidearms") != null)
+            if (HarmonyPatching.SSLoaded)
             {
                 return;
             }
