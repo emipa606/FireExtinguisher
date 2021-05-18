@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Mini-turret -->
+  <Turret_MiniTurret_FE.label>Lance à incendie</Turret_MiniTurret_FE.label>
+  <Turret_MiniTurret_FE.description>Une lance à eau qui combat les incendies.</Turret_MiniTurret_FE.description>
+  <Bullet_FE_MiniTurret.label>Mousse anti-incendie de lance à incendie</Bullet_FE_MiniTurret.label>
+  <Gun_FE_MiniTurret.label>Lance à incendie</Gun_FE_MiniTurret.label>
+  <Gun_FE_MiniTurret.description>Un lanceur automatique de mousse anti-incendie conçu pour être monté sur une lance.</Gun_FE_MiniTurret.description>
+</LanguageData>

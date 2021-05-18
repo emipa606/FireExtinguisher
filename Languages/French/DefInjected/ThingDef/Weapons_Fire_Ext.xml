@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Fire Extinguisher -->
+  <Gun_Fire_Ext.label>Extincteur</Gun_Fire_Ext.label>
+  <Gun_Fire_Ext.description>Équipement de pompier</Gun_Fire_Ext.description>
+  <Gun_Fire_Ext.tools.0.label>manche</Gun_Fire_Ext.tools.0.label>
+  <Gun_Fire_Ext.tools.1.label>canon</Gun_Fire_Ext.tools.1.label>
+  <Bullet_Fire_Ext_Foam.label>Mousse d'extincteur</Bullet_Fire_Ext_Foam.label>
+  <Filth_FExtFireFoam.label>Mousse d'extincteur</Filth_FExtFireFoam.label>
+</LanguageData>

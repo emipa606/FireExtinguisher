@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <FExt.Name>Fire Extinguisher (by Pelador)</FExt.Name>
-  <FExt.WarmUpValue>Extinguisher warm up time [Default 1.5]:</FExt.WarmUpValue>
-  <FExt.WarmUpValueTip>Default value is [1.5]. (Changes to this value will only take effect after the game is restarted.)</FExt.WarmUpValueTip>
-  <FExt.CoolDownValue>Extinguisher cool down time [Default 2.0]:</FExt.CoolDownValue>
-  <FExt.CoolDownValueTip>Default value is [2.0]. (Changes to this value will only take effect after the game is restarted.)</FExt.CoolDownValueTip>
-  <FExt.RangeValue>Extinguisher Range [Default 12]:</FExt.RangeValue>
-  <FExt.RangeValueTip>Default value is [12]. (Changes to this value will only take effect after the game is restarted.)</FExt.RangeValueTip>
-  <FExt.BurstValue>Foam projectiles per shot [Default 3]:</FExt.BurstValue>
-  <FExt.BurstValueTip>Default value is [3]. (Changes to this value will only take effect after the game is restarted.)</FExt.BurstValueTip>
-  <FExt.SpeedValue>Speed of foam projectile [Default 30]:</FExt.SpeedValue>
-  <FExt.SpeedValueTip>Default value is [30]. (Changes to this value will only take effect after the game is restarted.)</FExt.SpeedValueTip>
-  <FExt.RadiusValue>Burst radius of foam projectile [Default 2.5]:</FExt.RadiusValue>
-  <FExt.RadiusValueTip>Default value is [2.5]. (Changes to this value will only take effect after the game is restarted.)</FExt.RadiusValueTip>
-  <FExt.UseCleanFoam>Allow fire extinguisher foam to have cleaning properties:</FExt.UseCleanFoam>
-  <FExt.DryOutTime>Time before cleaning foam degrades in minutes [Default 5]:</FExt.DryOutTime>
-  <FExt.GeneralValueTip>(Changes to values will only take effect after the game is restarted.)</FExt.GeneralValueTip>
+  <FExt.WarmUpValue>Temps de préchauffage de l'extincteur [Par défaut 1,5]:</FExt.WarmUpValue>
+  <FExt.WarmUpValueTip>La valeur par défaut est [1,5]. (Les modifications apportées à cette valeur ne prendront effet qu'après le redémarrage du jeu.)</FExt.WarmUpValueTip>
+  <FExt.CoolDownValue>Temps de recharge de l'extincteur [Par défaut 2.0]:</FExt.CoolDownValue>
+  <FExt.CoolDownValueTip>La valeur par défaut est [2,0]. (Les modifications apportées à cette valeur ne prendront effet qu'après le redémarrage du jeu.)</FExt.CoolDownValueTip>
+  <FExt.RangeValue>Rayon de l'extincteur [Par défaut 12]:</FExt.RangeValue>
+  <FExt.RangeValueTip>La valeur par défaut est [12]. (Les modifications apportées à cette valeur ne prendront effet qu'après le redémarrage du jeu.)</FExt.RangeValueTip>
+  <FExt.BurstValue>Projectiles en mousse par coup [Par défaut 3]:</FExt.BurstValue>
+  <FExt.BurstValueTip>La valeur par défaut est [3]. (Les modifications apportées à cette valeur ne prendront effet qu'après le redémarrage du jeu.)</FExt.BurstValueTip>
+  <FExt.SpeedValue>Vitesse du projectile en mousse [Par défaut 30]:</FExt.SpeedValue>
+  <FExt.SpeedValueTip>La valeur par défaut est [30]. (Les modifications apportées à cette valeur ne prendront effet qu'après le redémarrage du jeu.)</FExt.SpeedValueTip>
+  <FExt.RadiusValue>Rayon d'éclatement du projectile en mousse [Valeur par défaut 2,5]:</FExt.RadiusValue>
+  <FExt.RadiusValueTip>La valeur par défaut est [2,5]. (Les modifications apportées à cette valeur ne prendront effet qu'après le redémarrage du jeu.)</FExt.RadiusValueTip>
+  <FExt.UseCleanFoam>Permettre à la mousse anti-feu d'avoir des propriétés nettoyantes:</FExt.UseCleanFoam>
+  <FExt.DryOutTime>Délai avant que la mousse anti-feu ne se dégrade en minutes [Par défaut 5]:</FExt.DryOutTime>
+  <FExt.GeneralValueTip>(Les modifications apportées aux valeurs ne prendront effet qu'après le redémarrage du jeu.)</FExt.GeneralValueTip>
   <!--  Fire Foam Belt -->
-  <FFoamBelt.FoamUses>{0} Uses:[{1}]</FFoamBelt.FoamUses>
-  <FFoamBelt.FoamDesc>Equipped with a {0}. Click to select use.</FFoamBelt.FoamDesc>
-  <FFoamBelt.DoNothing>Do Nothing</FFoamBelt.DoNothing>
-  <FFoamBelt.Activate>Activate {0}</FFoamBelt.Activate>
-  <FFoamBelt.ReasonPrefix>Failed to use {0} since </FFoamBelt.ReasonPrefix>
-  <FFoamBelt.NotBurning>{0} is not burning.</FFoamBelt.NotBurning>
-  <FFoamBelt.NoCloseFire>{0} is not close enough to a fire.</FFoamBelt.NoCloseFire>
-  <FFoamBelt.NoValidMap>{0} is not spawned on a map.</FFoamBelt.NoValidMap>
+  <FFoamBelt.FoamUses>{0} Utilisations: [{1}]</FFoamBelt.FoamUses>
+  <FFoamBelt.FoamDesc>Équipé d'un {0}. Cliquez pour sélectionner l'utilisation.</FFoamBelt.FoamDesc>
+  <FFoamBelt.DoNothing>Ne rien faire</FFoamBelt.DoNothing>
+  <FFoamBelt.Activate>Activer {0}</FFoamBelt.Activate>
+  <FFoamBelt.ReasonPrefix>Échec de l'utilisation de {0} depuis</FFoamBelt.ReasonPrefix>
+  <FFoamBelt.NotBurning>{0} ne brûle pas.</FFoamBelt.NotBurning>
+  <FFoamBelt.NoCloseFire>{0} n'est pas assez proche d'un feu.</FFoamBelt.NoCloseFire>
+  <FFoamBelt.NoValidMap>{0} n'est pas généré sur une carte.</FFoamBelt.NoValidMap>
 </LanguageData>

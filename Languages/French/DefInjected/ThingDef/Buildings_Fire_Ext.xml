@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <FExt_Shelf.label>Support d'extincteur</FExt_Shelf.label>
+  <FExt_Shelf.description>Les extincteurs stockés dans celui-ci ne se détérioreront pas, même à l'extérieur.</FExt_Shelf.description>
+  <FExt_CeilingFoamPopper.label>Système anti-incendie de plafon</FExt_CeilingFoamPopper.label>
+  <FExt_CeilingFoamPopper.description>Lorsqu'il détecte un incendie, ce dispositif de sécurité éclate et pulvérise une mousse ignifugée dans un champ circulaire autour de lui-même sur le sol. Peut également être déclenché manuellement.</FExt_CeilingFoamPopper.description>
+  <FExt_CeilingFoamPopper.comps.1.useLabel>Déclenchement de la mousse anti-feu</FExt_CeilingFoamPopper.comps.1.useLabel>
+</LanguageData>
