@@ -6,7 +6,7 @@ namespace FireExt
     // Token: 0x02000008 RID: 8
     public class Controller : Mod
     {
-        public static string LastWeaponCheckType;
+        public static ThingDef LastWeaponCheckType;
 
         // Token: 0x04000003 RID: 3
         public static Settings Settings;
