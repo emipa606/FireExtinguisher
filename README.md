@@ -7,6 +7,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2002292418
 
 - Added the patch for Simple Sidearms
 - Pawns incapable of violence should now be able to use the extinguisher (unless Simple Sidearms is loaded)
+- Added french translation, thanks qux!
 
 ![Image](https://i.imgur.com/7Gzt3Rg.png)
 
