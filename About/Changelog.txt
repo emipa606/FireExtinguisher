@@ -1,5 +1,8 @@
 # Changelog for FireExtinguisher
 
+1.0.10.0 - Bugfix for the simple-sidearms detection
+
+
 1.0.9.0 - Optimizations by Taranchuck, updated code-structure
 
 

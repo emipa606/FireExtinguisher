@@ -13,7 +13,7 @@ namespace FireExt
         {
             var harmony = new Harmony("com.Pelador.RW.ENSFE");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
-            if (ModLister.GetActiveModWithIdentifier("PeteTimesSix.SimpleSidearms") == null)
+            if (ModLister.GetActiveModWithIdentifier("PeteTimesSix.SimpleSidearms") != null)
             {
                 return;
             }
