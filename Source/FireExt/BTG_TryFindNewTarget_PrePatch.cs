@@ -13,9 +13,8 @@ namespace FireExt
         [HarmonyPriority(800)]
         public static bool PreFix(ref Building_TurretGun __instance, ref LocalTargetInfo __result)
         {
-            var flag = __instance.def.defName == "Turret_MiniTurret_FE";
             bool result;
-            if (flag)
+            if (__instance.def.defName == "Turret_MiniTurret_FE")
             {
                 var AttackVerb = __instance.AttackVerb;
                 var range = AttackVerb.verbProps.range;

@@ -43,7 +43,7 @@ Includes a dedicated shelf (found in Misc tab on the architect menu) for use. Re
 # Mod Notes
 
 
-Since the mechanics of the fire extinguisher is a "gun" it cannot be used by pacifist pawns, though funnily enough this can be used by pyromaniacs. 
+Since the mechanics of the fire extinguisher is a &quot;gun&quot; it cannot be used by pacifist pawns, though funnily enough this can be used by pyromaniacs. 
 
 Classified as a manufactured item.
 
@@ -73,7 +73,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2007567373]Simple Sidearm
 # *** Converting from V1.0 to V1.1 ***
  IMPORTANT
 
-Note if converting from V1.0 to V1.1 and you haven't flushed your config data for the mod then you will receive an error.
+Note if converting from V1.0 to V1.1 and you haven&apos;t flushed your config data for the mod then you will receive an error.
 
 Instructions below how to remove the mod options file for V1.0 FE.
 

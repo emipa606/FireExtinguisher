@@ -10,13 +10,12 @@ namespace FireExt
     internal static class MultiplayerSupport
     {
         // Token: 0x0400000B RID: 11
-        private static readonly Harmony harmony = new("rimworld.pelador.ffoambelt.multiplayersupport");
+        private static readonly Harmony harmony = new Harmony("rimworld.pelador.ffoambelt.multiplayersupport");
 
         // Token: 0x06000029 RID: 41 RVA: 0x00002F24 File Offset: 0x00001124
         static MultiplayerSupport()
         {
-            var flag = !MP.enabled;
-            if (!flag)
+            if (MP.enabled)
             {
                 MP.RegisterSyncMethod(typeof(FireFoamBelt), "DoFFoam");
             }

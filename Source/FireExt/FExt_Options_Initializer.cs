@@ -78,8 +78,7 @@ namespace FireExt
 
                     if (!foamCheckedCE)
                     {
-                        var flag8 = allDefsListForReading[i].defName == "Bullet_FireExtFoamCE";
-                        if (flag8)
+                        if (allDefsListForReading[i].defName == "Bullet_FireExtFoamCE")
                         {
                             allDefsListForReading[i].projectile.speed = (int) Controller.Settings.SpeedValue;
                             allDefsListForReading[i].projectile.explosionRadius =

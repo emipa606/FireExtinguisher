@@ -9,58 +9,51 @@ namespace FireExt
         public override AcceptanceReport AllowsPlacing(BuildableDef checkingDef, IntVec3 loc, Rot4 rot, Map map,
             Thing thingToIgnore = null, Thing thing = null)
         {
-            AcceptanceReport result;
             if (!loc.InBounds(map))
             {
-                result = false;
+                return false;
             }
-            else
+
+            if (!map.roofGrid.Roofed(loc))
             {
-                if (!map.roofGrid.Roofed(loc))
+                return false;
+            }
+
+            if (loc.Filled(map))
+            {
+                return false;
+            }
+
+            var list = loc.GetThingList(map);
+            if (list.Count <= 0)
+            {
+                return true;
+            }
+
+            foreach (var thingy in list)
+            {
+                if (thingy is not Building)
                 {
-                    result = false;
+                    continue;
                 }
-                else
+
+                var def = thingy.def;
+                if (def?.entityDefToBuild != null)
                 {
-                    if (loc.Filled(map))
+                    if (thingy.def.entityDefToBuild == checkingDef)
                     {
-                        result = false;
+                        return false;
                     }
-                    else
-                    {
-                        var list = loc.GetThingList(map);
-                        if (list.Count > 0)
-                        {
-                            foreach (var thingy in list)
-                            {
-                                if (thingy is not Building)
-                                {
-                                    continue;
-                                }
+                }
 
-                                var def = thingy.def;
-                                if (def?.entityDefToBuild != null)
-                                {
-                                    if (thingy.def.entityDefToBuild == checkingDef)
-                                    {
-                                        return false;
-                                    }
-                                }
-
-                                var isDoor = thingy.def.IsDoor;
-                                if (isDoor)
-                                {
-                                    return false;
-                                }
-                            }
-                        }
-
-                        result = true;
-                    }
+                var isDoor = thingy.def.IsDoor;
+                if (isDoor)
+                {
+                    return false;
                 }
             }
 
-            return result;
+            return true;
         }
     }
 }

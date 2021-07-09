@@ -13,7 +13,7 @@ namespace FireExt
         // Token: 0x0600000F RID: 15 RVA: 0x00002380 File Offset: 0x00000580
         public override void ExplosionStart(Explosion explosion, List<IntVec3> cellsToAffect)
         {
-            MoteMaker.ThrowSmoke(explosion.Position.ToVector3(), explosion.Map, 1f);
+            FleckMaker.ThrowSmoke(explosion.Position.ToVector3(), explosion.Map, 1f);
             ExplosionVisualEffectCenter(explosion);
         }
 
@@ -21,10 +21,8 @@ namespace FireExt
         public override DamageResult Apply(DamageInfo dinfo, Thing victim)
         {
             var result = new DamageResult();
-            var fire = victim as Fire;
-            var flag = fire == null || fire.Destroyed;
             DamageResult result2;
-            if (flag)
+            if (!(victim is Fire fire) || fire.Destroyed)
             {
                 result2 = result;
             }
@@ -32,8 +30,7 @@ namespace FireExt
             {
                 base.Apply(dinfo, victim);
                 fire.fireSize -= dinfo.Amount;
-                var flag2 = fire.fireSize <= 0.1f;
-                if (flag2)
+                if (fire.fireSize <= 0.1f)
                 {
                     fire.Destroy();
                 }

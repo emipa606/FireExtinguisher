@@ -40,8 +40,7 @@ namespace FireExt
         // Token: 0x0600002F RID: 47 RVA: 0x00003108 File Offset: 0x00001308
         public void DoWindowContents(Rect canvas)
         {
-            var listing_Standard = new Listing_Standard();
-            listing_Standard.ColumnWidth = canvas.width;
+            var listing_Standard = new Listing_Standard {ColumnWidth = canvas.width};
             listing_Standard.Begin(canvas);
             listing_Standard.Gap();
             listing_Standard.Label("FExt.WarmUpValue".Translate() + "  " + WarmUpValue);

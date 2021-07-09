@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="FireExtMakeableGun" ParentName="BaseMakeableGun" Abstract="True">
+    <weaponTags>
+      <li>FireExt_NotUsed</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ==================== Fire Foam Solution ======================== -->
+  <!-- To be considered: Base chemical for production -->
+  <!-- if applied would likely need to change vanilla fire foam popper and shell recipes -->
+  <!-- ==================== Fire Extinguisher ========================== -->
+  <ThingDef ParentName="FireExtMakeableGun">
+    <defName>Gun_Fire_Ext</defName>
+    <label>Fire Extinguisher</label>
+    <description>Fire Fighting Equipment</description>
+    <graphicData>
+      <texPath>Things/Item/Gun_Fire_Ext</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>FireExt</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+    <techLevel>Industrial</techLevel>
+    <weaponTags Inherit="false">
+      <li>FireExt_NotUsed</li>
+    </weaponTags>
+    <thingCategories>
+      <!--   <li>WeaponsRanged</li>  -->
+      <li>Manufactured</li>
+    </thingCategories>
+    <generateCommonality>0.05</generateCommonality>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>2.0</Mass>
+      <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+      <Flammability>0.05</Flammability>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li>
+        <forcedMissRadius>3</forcedMissRadius>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Fire_Ext_Foam</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>12</range>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>DispensePaste</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>1</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+    <comps Inherit="false">
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Fire_Ext_Foam</defName>
+    <label>Fire Extinguisher Foam</label>
+    <graphicData>
+      <texPath>Things/Projectile/Ext_Spray/Ext_Spray</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>FExtExtinguish</damageDef>
+      <!-- damage amount is the damage def default -->
+      <speed>30</speed>
+      <explosionRadius>2.5</explosionRadius>
+      <flyOverhead>false</flyOverhead>
+      <soundExplode>DispensePaste</soundExplode>
+      <postExplosionSpawnThingDef>Filth_FireFoam</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <postExplosionSpawnThingCount>3</postExplosionSpawnThingCount>
+      <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+      <!-- <explosionEffect>ExtinguisherExplosion</explosionEffect> -->
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseFilth">
+    <defName>Filth_FExtFireFoam</defName>
+    <label>Fire extinguisher foam</label>
+    <thingClass>FireExt.FExtFoam</thingClass>
+    <tickerType>Normal</tickerType>
+    <statBases>
+      <Beauty>-15</Beauty>
+      <Cleanliness>0</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/Spatter</texPath>
+      <color>(180, 200, 180, 95)</color>
+    </graphicData>
+    <pathCost>5</pathCost>
+    <filth>
+      <rainWashes>true</rainWashes>
+      <cleaningWorkToReduceThickness>50</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+      <allowsFire>false</allowsFire>
+    </filth>
+  </ThingDef>
+</Defs>

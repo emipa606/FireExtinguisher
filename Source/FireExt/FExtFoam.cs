@@ -89,9 +89,7 @@ namespace FireExt
         // Token: 0x06000017 RID: 23 RVA: 0x00002610 File Offset: 0x00000810
         private void DoFFCleaning(Thing targ)
         {
-            var filth = targ as Filth;
-            var flag = filth != null;
-            if (flag)
+            if (targ is Filth filth)
             {
                 filth.ThinFilth();
             }

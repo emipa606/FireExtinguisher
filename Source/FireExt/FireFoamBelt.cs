@@ -142,19 +142,16 @@ namespace FireExt
         public override void Tick()
         {
             base.Tick();
-            var flag = Wearer != null;
-            if (flag)
+            if (Wearer != null)
             {
-                var flag2 = Wearer.IsBurning();
-                if (flag2)
+                if (Wearer.IsBurning())
                 {
                     DoFFoamBeltPop(Wearer, this);
                 }
             }
             else
             {
-                var flag3 = this.IsBurning();
-                if (flag3)
+                if (this.IsBurning())
                 {
                     DoFFoamBeltPop(null, this);
                 }
