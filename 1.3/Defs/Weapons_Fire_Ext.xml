@@ -101,6 +101,8 @@
         <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
         <minQualityForArtistic>Excellent</minQualityForArtistic>
       </li>
+      <li Class="CompProperties_Styleable">
+      </li>
     </comps>
   </ThingDef>
   <ThingDef ParentName="BaseBullet">

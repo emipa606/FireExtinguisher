@@ -1,5 +1,8 @@
 # Changelog for FireExtinguisher
 
+1.0.12.0 - Should now no longer cause relic-issue in ideology
+
+
 1.0.11.0 - Mod updated for 1.3 and passed autotests
 
 
