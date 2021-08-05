@@ -1,5 +1,5 @@
 ﻿using HarmonyLib;
-using SimpleSidearms.utilities;
+using PeteTimesSix.SimpleSidearms.Utilities;
 using Verse;
 
 namespace FESSFix

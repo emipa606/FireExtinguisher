@@ -22,8 +22,9 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SimpleSidearms">
-      <HintPath>..\..\..\..\..\..\workshop\content\294100\927155256\v1.2\Assemblies\SimpleSidearms.dll</HintPath>
-      <EmbedInteropTypes>false</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\927155256\v1.3\Assemblies\SimpleSidearms.dll</HintPath>
+      <ExcludeAssets>runtime</ExcludeAssets>
+      <Private>false</Private>
     </Reference>
   </ItemGroup>
   <!-- 1.3.3052-beta -->

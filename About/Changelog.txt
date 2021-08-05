@@ -1,5 +1,8 @@
 # Changelog for FireExtinguisher
 
+1.0.14.0 - Should now work better with the updated Simple Sidearms
+
+
 1.0.13.0 - Removed the extra simplesidearms.dll that got added by mistake when updating the VS-project
 
 
