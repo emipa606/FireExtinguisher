@@ -19,6 +19,7 @@
         <offset>(0,0,0)</offset>
       </shadowData>
     </graphicData>
+    <drawerType>MapMeshAndRealTime</drawerType>
     <uiIconPath>Things/Building/Security/TurretMini_FE_MenuIcon</uiIconPath>
     <uiIconScale>0.90</uiIconScale>
     <minifiedDef>MinifiedThing</minifiedDef>

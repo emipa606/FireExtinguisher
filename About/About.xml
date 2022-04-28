@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Fire Extinguisher (Continued)</name>
   <packageId>Mlie.FireExtinguisher</packageId>
@@ -21,7 +21,7 @@
     <li>brrainz.harmony</li>
     <li>CETeam.CombatExtended</li>
   </loadAfter>
-  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
 Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2002292418
 
@@ -29,7 +29,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2002292418
 - Pawns incapable of violence should now be able to use the extinguisher (unless Simple Sidearms is loaded)
 - Added french translation, thanks qux!
 
-[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+[img]https://i.imgur.com/pufA0kM.png[/img]
 
 [table]
 	[tr]
@@ -38,7 +38,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2002292418
 	[/tr]
 [/table]
 	
-[img]https://i.imgur.com/NOW7jU1.png[/img]
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
 
 [h1]Overview[/h1] V1.1
 
@@ -56,7 +56,7 @@ Includes a dedicated shelf (found in Misc tab on the architect menu) for use. Re
 
 [h1]Mod Notes[/h1]
 
-Since the mechanics of the fire extinguisher is a &quot;gun&quot; it cannot be used by pacifist pawns, though funnily enough this can be used by pyromaniacs. 
+Since the mechanics of the fire extinguisher is a "gun" it cannot be used by pacifist pawns, though funnily enough this can be used by pyromaniacs. 
 
 Classified as a manufactured item.
 
@@ -82,14 +82,14 @@ A fire foam belt is included with the mod that will trigger if the wearer or the
 
 [h1]*** Converting from V1.0 to V1.1 ***[/h1] IMPORTANT
 
-Note if converting from V1.0 to V1.1 and you haven&apos;t flushed your config data for the mod then you will receive an error.
+Note if converting from V1.0 to V1.1 and you haven't flushed your config data for the mod then you will receive an error.
 
 Instructions below how to remove the mod options file for V1.0 FE.
 
 (CC BY-NC-SA 4.0)
 
 
-[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[img]https://i.imgur.com/PwoNOj4.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
@@ -98,6 +98,5 @@ Instructions below how to remove the mod options file for V1.0 FE.
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [/list]
-
 </description>
 </ModMetaData>

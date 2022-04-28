@@ -1,6 +1,6 @@
 # FireExtinguisher
 
-![Image](https://i.imgur.com/WAEzk68.png)
+![Image](https://i.imgur.com/buuPQel.png)
 
 Update of peladors mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2002292418
@@ -9,19 +9,10 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2002292418
 - Pawns incapable of violence should now be able to use the extinguisher (unless Simple Sidearms is loaded)
 - Added french translation, thanks qux!
 
-![Image](https://i.imgur.com/7Gzt3Rg.png)
+![Image](https://i.imgur.com/pufA0kM.png)
 
-
-[table]
-	[tr]
-		[td]https://invite.gg/Mlie]![Image](https://i.imgur.com/zdzzBrc.png)
-[/td]
-		[td]https://github.com/emipa606/FireExtinguisher]![Image](https://i.imgur.com/kTkpTOE.png)
-[/td]
-	[/tr]
-[/table]
 	
-![Image](https://i.imgur.com/NOW7jU1.png)
+![Image](https://i.imgur.com/Z4GOv8H.png)
 
 
 # Overview
@@ -43,7 +34,7 @@ Includes a dedicated shelf (found in Misc tab on the architect menu) for use. Re
 # Mod Notes
 
 
-Since the mechanics of the fire extinguisher is a &quot;gun&quot; it cannot be used by pacifist pawns, though funnily enough this can be used by pyromaniacs. 
+Since the mechanics of the fire extinguisher is a "gun" it cannot be used by pacifist pawns, though funnily enough this can be used by pyromaniacs. 
 
 Classified as a manufactured item.
 
@@ -73,14 +64,14 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2007567373]Simple Sidearm
 # *** Converting from V1.0 to V1.1 ***
  IMPORTANT
 
-Note if converting from V1.0 to V1.1 and you haven&apos;t flushed your config data for the mod then you will receive an error.
+Note if converting from V1.0 to V1.1 and you haven't flushed your config data for the mod then you will receive an error.
 
 Instructions below how to remove the mod options file for V1.0 FE.
 
 (CC BY-NC-SA 4.0)
 
 
-![Image](https://i.imgur.com/Rs6T6cr.png)
+![Image](https://i.imgur.com/PwoNOj4.png)
 
 
 
@@ -90,7 +81,6 @@ Instructions below how to remove the mod options file for V1.0 FE.
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
-
 
 
 
