@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Turret_MiniTurret_FE.label>FE迷你轉塔</Turret_MiniTurret_FE.label>
+  <Turret_MiniTurret_FE.description>一個可以滅火的小型砲塔。</Turret_MiniTurret_FE.description>
+  <Turret_MiniTurret_FE.comps.1.fuelLabel>射擊，直到用完</Turret_MiniTurret_FE.comps.1.fuelLabel>
+  <Turret_MiniTurret_FE.comps.1.fuelGizmoLabel>桶的耐久性</Turret_MiniTurret_FE.comps.1.fuelGizmoLabel>
+  <Bullet_FE_MiniTurret.label>FE迷你轉塔泡沫</Bullet_FE_MiniTurret.label>
+  <Gun_FE_MiniTurret.label>FE 小型砲塔槍</Gun_FE_MiniTurret.label>
+  <Gun_FE_MiniTurret.description>一種自動FE彈丸泡沫發射器，可安裝在砲塔上。</Gun_FE_MiniTurret.description>
+</LanguageData>

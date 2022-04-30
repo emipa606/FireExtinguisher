@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Gun_Fire_Ext.label>滅火器</Gun_Fire_Ext.label>
+  <Gun_Fire_Ext.description>消防設備</Gun_Fire_Ext.description>
+  <Gun_Fire_Ext.tools.0.label>握把</Gun_Fire_Ext.tools.0.label>
+  <Gun_Fire_Ext.tools.1.label>鋼瓶</Gun_Fire_Ext.tools.1.label>
+  <Bullet_Fire_Ext_Foam.label>滅火器泡沫</Bullet_Fire_Ext_Foam.label>
+  <Filth_FExtFireFoam.label>滅火器泡沫</Filth_FExtFireFoam.label>
+</LanguageData>
