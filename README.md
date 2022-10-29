@@ -8,6 +8,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2002292418
 - Added the patch for Simple Sidearms
 - Pawns incapable of violence should now be able to use the extinguisher (unless Simple Sidearms is loaded)
 - Added french translation, thanks qux!
+- Updated Traditional Chinese translation, thanks to 虛無_鬼王!
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 
@@ -81,6 +82,7 @@ Instructions below how to remove the mod options file for V1.0 FE.
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 
 

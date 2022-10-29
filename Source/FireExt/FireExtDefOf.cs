@@ -1,11 +1,10 @@
 ﻿using RimWorld;
 using Verse;
 
-namespace FireExt
+namespace FireExt;
+
+[DefOf]
+public static class FireExtDefOf
 {
-    [DefOf]
-    public static class FireExtDefOf
-    {
-        public static ThingDef Gun_Fire_Ext;
-    }
+    public static ThingDef Gun_Fire_Ext;
 }

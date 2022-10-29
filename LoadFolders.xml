@@ -18,4 +18,10 @@
     <li IfModActive="CETeam.CombatExtended">CE</li>
     <li IfModActive="PeteTimesSix.SimpleSidearms">SimpleSidearms/1.3</li>
   </v1.3>
+  <v1.4>
+    <li>/</li>
+    <li>1.4</li>
+    <li IfModActive="CETeam.CombatExtended">CE</li>
+    <li IfModActive="PeteTimesSix.SimpleSidearms">SimpleSidearms/1.4</li>
+  </v1.4>
 </loadFolders>

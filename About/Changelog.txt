@@ -1,5 +1,9 @@
 # Changelog for FireExtinguisher
 
+1.4.1 - Mod updated for 1.4 and passed autotests..
+Used DeepL to update translations for ChineseSimplified, Czech, Danish, Dutch, Estonian, Finnish, French, German, Hungarian, Japanese, Polish, Portuguese, Romanian, Russian, Slovak, Spanish, Swedish, Turkish
+
+
 1.3.2 - Updated Traditional Chinese translation, thanks to 虛無_鬼王!
 
 

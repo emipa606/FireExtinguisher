@@ -1,41 +1,34 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using Verse;
 
-namespace FireExt
+namespace FireExt;
+
+public class FETargetUtility
 {
-    // Token: 0x02000003 RID: 3
-    public class FETargetUtility
+    internal static Thing GetFETarget(Building_TurretGun BTG, float range)
     {
-        // Token: 0x06000003 RID: 3 RVA: 0x000020B4 File Offset: 0x000002B4
-        internal static Thing GetFETarget(Building_TurretGun BTG, float range)
+        var candidates = new List<Thing>();
+        var list = GenRadial.RadialDistinctThingsAround(BTG.Position, BTG.Map, range, false).ToList();
+        if (list.Count <= 0)
         {
-            var candidates = new List<Thing>();
-            var list = GenRadial.RadialDistinctThingsAround(BTG.Position, BTG.Map, range, false).ToList();
-            if (list.Count <= 0)
+            return null;
+        }
+
+        foreach (var thing in list)
+        {
+            if (thing.def != ThingDefOf.Fire && !thing.IsBurning() ||
+                !GenSight.LineOfSight(BTG.Position, thing.Position, BTG.Map, true))
             {
-                return null;
+                continue;
             }
 
-            foreach (var thing in list)
+            if (thing.def != ThingDefOf.Fire)
             {
-                if (thing.def != ThingDefOf.Fire && !thing.IsBurning() ||
-                    !GenSight.LineOfSight(BTG.Position, thing.Position, BTG.Map, true))
+                if (thing.Faction != null)
                 {
-                    continue;
-                }
-
-                if (thing.def != ThingDefOf.Fire)
-                {
-                    if (thing.Faction != null)
-                    {
-                        if (!thing.Faction.HostileTo(BTG.Faction))
-                        {
-                            candidates.AddDistinct(thing);
-                        }
-                    }
-                    else
+                    if (!thing.Faction.HostileTo(BTG.Faction))
                     {
                         candidates.AddDistinct(thing);
                     }
@@ -45,13 +38,12 @@ namespace FireExt
                     candidates.AddDistinct(thing);
                 }
             }
-
-            if (candidates.Count > 0)
+            else
             {
-                return candidates.RandomElement();
+                candidates.AddDistinct(thing);
             }
-
-            return null;
         }
+
+        return candidates.Count > 0 ? candidates.RandomElement() : null;
     }
 }
