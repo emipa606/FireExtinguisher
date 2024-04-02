@@ -1,5 +1,8 @@
 # Changelog for FireExtinguisher
 
+1.5.0 - Mod updated for 1.5 and passed autotests
+
+
 1.4.2 - Removed the SimpleSidearms patch as it is no longer needed. Thanks Kittamaru!.
 Used DeepL to update translations for ChineseSimplified, German, Russian
 

@@ -2,39 +2,38 @@ using System.Collections.Generic;
 using RimWorld;
 using Verse;
 
-namespace FireExt
+namespace FireExt;
+
+public class DamageWorker_FExtNoCamShake : DamageWorker
 {
-    public class DamageWorker_FExtNoCamShake : DamageWorker
+    private const float DamageAmountToFireSizeRatio = 0.1f;
+
+    public override void ExplosionStart(Explosion explosion, List<IntVec3> cellsToAffect)
     {
-        private const float DamageAmountToFireSizeRatio = 0.1f;
+        FleckMaker.ThrowSmoke(explosion.Position.ToVector3(), explosion.Map, 1f);
+        ExplosionVisualEffectCenter(explosion);
+    }
 
-        public override void ExplosionStart(Explosion explosion, List<IntVec3> cellsToAffect)
+    public override DamageResult Apply(DamageInfo dinfo, Thing victim)
+    {
+        var result = new DamageResult();
+        DamageResult result2;
+        if (victim is not Fire fire || fire.Destroyed)
         {
-            FleckMaker.ThrowSmoke(explosion.Position.ToVector3(), explosion.Map, 1f);
-            ExplosionVisualEffectCenter(explosion);
+            result2 = result;
         }
-
-        public override DamageResult Apply(DamageInfo dinfo, Thing victim)
+        else
         {
-            var result = new DamageResult();
-            DamageResult result2;
-            if (!(victim is Fire fire) || fire.Destroyed)
+            base.Apply(dinfo, victim);
+            fire.fireSize -= dinfo.Amount;
+            if (fire.fireSize <= 0.1f)
             {
-                result2 = result;
-            }
-            else
-            {
-                base.Apply(dinfo, victim);
-                fire.fireSize -= dinfo.Amount;
-                if (fire.fireSize <= 0.1f)
-                {
-                    fire.Destroy();
-                }
-
-                result2 = result;
+                fire.Destroy();
             }
 
-            return result2;
+            result2 = result;
         }
+
+        return result2;
     }
 }

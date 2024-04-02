@@ -4,7 +4,7 @@ using Verse;
 
 namespace FireExt;
 
-[HarmonyPatch(typeof(Building_TurretGun), "TryFindNewTarget")]
+[HarmonyPatch(typeof(Building_TurretGun), nameof(Building_TurretGun.TryFindNewTarget))]
 public class BTG_TryFindNewTarget_PrePatch
 {
     [HarmonyPrefix]
