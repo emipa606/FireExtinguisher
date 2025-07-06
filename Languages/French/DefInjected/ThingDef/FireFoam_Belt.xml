@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <FireFoam_Belt.label>Ceinture anti-feu</FireFoam_Belt.label>
   <FireFoam_Belt.description>Une ceinture défensive automatique à usage unique utilisée pour éteindre les incendies. Il peut être déclenché à proximité du feu ou lorsque le porteur s'enflamme.</FireFoam_Belt.description>

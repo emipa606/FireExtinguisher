@@ -8,7 +8,7 @@ namespace FireExt;
 [StaticConstructorOnStartup]
 internal static class MultiplayerSupport
 {
-    private static readonly Harmony harmony = new Harmony("rimworld.pelador.ffoambelt.multiplayersupport");
+    private static readonly Harmony harmony = new("rimworld.pelador.ffoambelt.multiplayersupport");
 
     static MultiplayerSupport()
     {

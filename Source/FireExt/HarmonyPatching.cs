@@ -11,18 +11,18 @@ public static class HarmonyPatching
     {
         var harmony = new Harmony("com.Pelador.RW.ENSFE");
         harmony.PatchAll(Assembly.GetExecutingAssembly());
-        if (ModLister.GetActiveModWithIdentifier("PeteTimesSix.SimpleSidearms") != null)
+        if (ModLister.GetActiveModWithIdentifier("PeteTimesSix.SimpleSidearms", true) != null)
         {
             return;
         }
 
-        var thingDef_IsWeaponGet = AccessTools.PropertyGetter(typeof(ThingDef), "IsWeapon");
-        var thingDef_IsWeapon_Postfix =
-            AccessTools.Method(typeof(HarmonyPatching), "ThingDef_IsWeapon_Postfix");
-        harmony.Patch(thingDef_IsWeaponGet, null, new HarmonyMethod(thingDef_IsWeapon_Postfix));
+        var thingDefIsWeaponGet = AccessTools.PropertyGetter(typeof(ThingDef), nameof(ThingDef.IsWeapon));
+        var thingDefIsWeaponPostfix =
+            AccessTools.Method(typeof(HarmonyPatching), nameof(ThingDef_IsWeapon_Postfix));
+        harmony.Patch(thingDefIsWeaponGet, null, new HarmonyMethod(thingDefIsWeaponPostfix));
 
-        var workTagIsDisabledMeth = AccessTools.Method(typeof(Pawn), "WorkTagIsDisabled");
-        var workTagIsDisabledPostfix = AccessTools.Method(typeof(HarmonyPatching), "WorkTagIsDisabledPostfix");
+        var workTagIsDisabledMeth = AccessTools.Method(typeof(Pawn), nameof(Pawn.WorkTagIsDisabled));
+        var workTagIsDisabledPostfix = AccessTools.Method(typeof(HarmonyPatching), nameof(WorkTagIsDisabledPostfix));
         harmony.Patch(workTagIsDisabledMeth, null, new HarmonyMethod(workTagIsDisabledPostfix));
     }
 
@@ -44,7 +44,7 @@ public static class HarmonyPatching
             return;
         }
 
-        if (__result == false)
+        if (!__result)
         {
             return;
         }

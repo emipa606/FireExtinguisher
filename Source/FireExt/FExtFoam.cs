@@ -19,12 +19,12 @@ public class FExtFoam : Filth
         FFspawnTick = Find.TickManager.TicksGame;
     }
 
-    private void Refill()
+    private void refill()
     {
         FFspawnTick = Find.TickManager.TicksGame;
     }
 
-    public override void Tick()
+    protected override void Tick()
     {
         if (FFspawnTick + (Controller.Settings.DryOutTime * 60 * 60) < Find.TickManager.TicksGame)
         {
@@ -37,15 +37,15 @@ public class FExtFoam : Filth
                 return;
             }
 
-            var TargetMap = Map;
-            var TargetCell = Position;
-            var Filthlist = TargetCell.GetThingList(TargetMap);
-            if (Filthlist.Count <= 0)
+            var targetMap = Map;
+            var targetCell = Position;
+            var filthList = targetCell.GetThingList(targetMap);
+            if (filthList.Count <= 0)
             {
                 return;
             }
 
-            foreach (var thing in Filthlist)
+            foreach (var thing in filthList)
             {
                 if (thing is not Filth)
                 {
@@ -53,7 +53,7 @@ public class FExtFoam : Filth
                 }
 
                 var filthCell = thing.Position;
-                if (filthCell != TargetCell)
+                if (filthCell != targetCell)
                 {
                     continue;
                 }
@@ -63,11 +63,11 @@ public class FExtFoam : Filth
                     continue;
                 }
 
-                var CleaningAmount = thing.def.filth.cleaningWorkToReduceThickness *
+                var cleaningAmount = thing.def.filth.cleaningWorkToReduceThickness *
                                      (Controller.Settings.CleanDmgResist * Controller.Settings.DamTickPeriod);
-                if (Find.TickManager.TicksGame - FFspawnTick > CleaningAmount)
+                if (Find.TickManager.TicksGame - FFspawnTick > cleaningAmount)
                 {
-                    DoFFCleaning(thing);
+                    doFfCleaning(thing);
                 }
             }
         }
@@ -76,10 +76,10 @@ public class FExtFoam : Filth
     public override void ThickenFilth()
     {
         base.ThickenFilth();
-        Refill();
+        refill();
     }
 
-    private void DoFFCleaning(Thing targ)
+    private static void doFfCleaning(Thing targ)
     {
         if (targ is Filth filth)
         {

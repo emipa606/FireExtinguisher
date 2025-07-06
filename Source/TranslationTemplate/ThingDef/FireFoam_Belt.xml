@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Fire foam belt -->
+  <FireFoam_Belt.label>Fire foam belt</FireFoam_Belt.label>
+  <!-- EN: An automatic single-use defensive belt used to put out fires. It can be triggered when close to fire or when the wearer becomes alight. -->
+  <FireFoam_Belt.description>An automatic single-use defensive belt used to put out fires. It can be triggered when close to fire or when the wearer becomes alight.</FireFoam_Belt.description>
+</LanguageData>

@@ -7,10 +7,10 @@ namespace FireExt;
 
 public class FETargetUtility
 {
-    internal static Thing GetFETarget(Building_TurretGun BTG, float range)
+    internal static Thing GetFeTarget(Building_TurretGun btg, float range)
     {
         var candidates = new List<Thing>();
-        var list = GenRadial.RadialDistinctThingsAround(BTG.Position, BTG.Map, range, false).ToList();
+        var list = GenRadial.RadialDistinctThingsAround(btg.Position, btg.Map, range, false).ToList();
         if (list.Count <= 0)
         {
             return null;
@@ -19,7 +19,7 @@ public class FETargetUtility
         foreach (var thing in list)
         {
             if (thing.def != ThingDefOf.Fire && !thing.IsBurning() ||
-                !GenSight.LineOfSight(BTG.Position, thing.Position, BTG.Map, true))
+                !GenSight.LineOfSight(btg.Position, thing.Position, btg.Map, true))
             {
                 continue;
             }
@@ -28,7 +28,7 @@ public class FETargetUtility
             {
                 if (thing.Faction != null)
                 {
-                    if (!thing.Faction.HostileTo(BTG.Faction))
+                    if (!thing.Faction.HostileTo(btg.Faction))
                     {
                         candidates.AddDistinct(thing);
                     }

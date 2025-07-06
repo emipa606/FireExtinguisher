@@ -17,23 +17,18 @@ public class DamageWorker_FExtNoCamShake : DamageWorker
     public override DamageResult Apply(DamageInfo dinfo, Thing victim)
     {
         var result = new DamageResult();
-        DamageResult result2;
-        if (victim is not Fire fire || fire.Destroyed)
+        if (victim is not Fire { Destroyed: false } fire)
         {
-            result2 = result;
-        }
-        else
-        {
-            base.Apply(dinfo, victim);
-            fire.fireSize -= dinfo.Amount;
-            if (fire.fireSize <= 0.1f)
-            {
-                fire.Destroy();
-            }
-
-            result2 = result;
+            return result;
         }
 
-        return result2;
+        base.Apply(dinfo, victim);
+        fire.fireSize -= dinfo.Amount;
+        if (fire.fireSize <= DamageAmountToFireSizeRatio)
+        {
+            fire.Destroy();
+        }
+
+        return result;
     }
 }

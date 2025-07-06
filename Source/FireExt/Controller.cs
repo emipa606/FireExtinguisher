@@ -9,12 +9,12 @@ public class Controller : Mod
     public static ThingDef LastWeaponCheckType;
 
     public static Settings Settings;
-    public static string currentVersion;
+    public static string CurrentVersion;
 
     public Controller(ModContentPack content) : base(content)
     {
         Settings = GetSettings<Settings>();
-        currentVersion =
+        CurrentVersion =
             VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 

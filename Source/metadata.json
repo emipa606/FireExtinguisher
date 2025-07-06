@@ -2,5 +2,17 @@
   "Continued": true,
   "CanAdd": "0",
   "CanRemove": "2",
-  "PreviewVersion": "1.5"
+  "PreviewVersion": "1.6",
+  "Patches": true,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 25473,
+  "LinesOfXML": 22087,
+  "CodeBaseSize": 74,
+  "LastXmlCleaning": "2025-07-06T19:56:55.2657117+02:00",
+  "SocialImageSet": true,
+  "SearchTags": [
+    " firefighting",
+    " tool"
+  ]
 }

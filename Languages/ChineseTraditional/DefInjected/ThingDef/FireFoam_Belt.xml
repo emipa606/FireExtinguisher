@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <FireFoam_Belt.label>防火泡沫帶</FireFoam_Belt.label>
   <FireFoam_Belt.description>一種用於滅火的一次性自動防禦帶。當接近火源或佩戴者被點燃時，它可以被觸發。</FireFoam_Belt.description>

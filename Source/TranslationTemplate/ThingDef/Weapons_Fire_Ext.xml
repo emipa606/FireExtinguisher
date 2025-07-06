@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Fire Extinguisher Foam -->
+  <Bullet_Fire_Ext_Foam.label>Fire Extinguisher Foam</Bullet_Fire_Ext_Foam.label>
+  <!-- EN: Fire extinguisher foam -->
+  <Filth_FExtFireFoam.label>Fire extinguisher foam</Filth_FExtFireFoam.label>
+  <!-- EN: Fire Extinguisher -->
+  <Gun_Fire_Ext.label>Fire Extinguisher</Gun_Fire_Ext.label>
+  <!-- EN: Fire Fighting Equipment -->
+  <Gun_Fire_Ext.description>Fire Fighting Equipment</Gun_Fire_Ext.description>
+  <!-- EN: stock -->
+  <Gun_Fire_Ext.tools.stock.label>stock</Gun_Fire_Ext.tools.stock.label>
+  <!-- EN: barrel -->
+  <Gun_Fire_Ext.tools.barrel.label>barrel</Gun_Fire_Ext.tools.barrel.label>
+  <!-- EN: Fire Extinguisher -->
+  <Gun_Fire_Ext.verbs.Verb_Shoot.label>Fire Extinguisher</Gun_Fire_Ext.verbs.Verb_Shoot.label>
+</LanguageData>

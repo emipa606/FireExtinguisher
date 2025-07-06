@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Ceiling firefoam popper -->
+  <FExt_CeilingFoamPopper.label>Ceiling firefoam popper</FExt_CeilingFoamPopper.label>
+  <!-- EN: When it detects fire, this safety device pops and sprays a fire-retardant foam in a circular field around itself on the floor. Can also be triggered manually. -->
+  <FExt_CeilingFoamPopper.description>When it detects fire, this safety device pops and sprays a fire-retardant foam in a circular field around itself on the floor. Can also be triggered manually.</FExt_CeilingFoamPopper.description>
+  <!-- EN: Trigger {0_label} -->
+  <FExt_CeilingFoamPopper.comps.CompUsable.useLabel>Trigger {0_label}</FExt_CeilingFoamPopper.comps.CompUsable.useLabel>
+  <!-- EN: Fire Extinguisher Shelf -->
+  <FExt_Shelf.label>Fire Extinguisher Shelf</FExt_Shelf.label>
+  <!-- EN: Fire extinguishers stored in this will not deteriorate, even if outside. -->
+  <FExt_Shelf.description>Fire extinguishers stored in this will not deteriorate, even if outside.</FExt_Shelf.description>
+</LanguageData>

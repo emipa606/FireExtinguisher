@@ -1,0 +1,31 @@
+ManifestFileVersion: 0
+CRC: 3129002733
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6176ea69b9f1fb755ae1806ba5207ea5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 6176ea69b9f1fb755ae1806ba5207ea5
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.FireExtinguisher/Textures/Things/Building/Misc/FExt_Shelf/FExt_Shelf_west.png
+- Assets/Data/Mlie.FireExtinguisher/Textures/Things/Item/Gun_Fire_Ext.png
+- Assets/Data/Mlie.FireExtinguisher/Textures/Things/Projectile/Ext_Spray/Ext_Spray.png
+- Assets/Data/Mlie.FireExtinguisher/Textures/Things/CEAmmo/FExt/Ammo_FireExtFoamCE.png
+- Assets/Data/Mlie.FireExtinguisher/Textures/Things/Building/Misc/FExt_Shelf/FExt_Shelf_east.png
+- Assets/Data/Mlie.FireExtinguisher/Textures/Things/Building/Misc/FExt_Shelf/FExt_Shelf_south.png
+- Assets/Data/Mlie.FireExtinguisher/Textures/Things/Building/Misc/FExt_Shelf/FExt_Shelf_north.png
+- Assets/Data/Mlie.FireExtinguisher/Textures/Things/Building/Security/TurretMini_FE_MenuIcon.png
+- Assets/Data/Mlie.FireExtinguisher/Textures/Things/Building/Misc/FExt_CeilingFoamPopper.png
+- Assets/Data/Mlie.FireExtinguisher/Textures/Things/Item/FireFoam_Belt/FireFoam_Belt.png
+- Assets/Data/Mlie.FireExtinguisher/Textures/Things/Building/Security/TurretMini_FE_Base.png
+- Assets/Data/Mlie.FireExtinguisher/Textures/Things/Building/Security/TurretMini_FE_Top.png
+Dependencies: []

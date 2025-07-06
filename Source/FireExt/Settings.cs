@@ -28,46 +28,46 @@ public class Settings : ModSettings
 
     public void DoWindowContents(Rect canvas)
     {
-        var listing_Standard = new Listing_Standard { ColumnWidth = canvas.width };
-        listing_Standard.Begin(canvas);
-        listing_Standard.Gap();
-        listing_Standard.Label("FExt.WarmUpValue".Translate() + "  " + WarmUpValue);
-        WarmUpValue = Math.Round(listing_Standard.Slider((float)WarmUpValue, 1f, 3f), 2);
-        listing_Standard.Gap();
-        listing_Standard.Label("FExt.CoolDownValue".Translate() + "  " + CoolDownValue);
-        CoolDownValue = Math.Round(listing_Standard.Slider((float)CoolDownValue, 1f, 3f), 2);
-        listing_Standard.Gap();
+        var listingStandard = new Listing_Standard { ColumnWidth = canvas.width };
+        listingStandard.Begin(canvas);
+        listingStandard.Gap();
+        listingStandard.Label("FExt.WarmUpValue".Translate() + "  " + WarmUpValue);
+        WarmUpValue = Math.Round(listingStandard.Slider((float)WarmUpValue, 1f, 3f), 2);
+        listingStandard.Gap();
+        listingStandard.Label("FExt.CoolDownValue".Translate() + "  " + CoolDownValue);
+        CoolDownValue = Math.Round(listingStandard.Slider((float)CoolDownValue, 1f, 3f), 2);
+        listingStandard.Gap();
         checked
         {
-            listing_Standard.Label("FExt.RangeValue".Translate() + "  " + (int)RangeValue);
-            RangeValue = listing_Standard.Slider(RangeValue, 3f, 16f);
-            listing_Standard.Gap();
-            listing_Standard.Label("FExt.BurstValue".Translate() + "  " + (int)BurstValue);
-            BurstValue = listing_Standard.Slider(BurstValue, 1f, 4f);
-            listing_Standard.Gap();
-            listing_Standard.Label("FExt.SpeedValue".Translate() + "  " + (int)SpeedValue);
-            SpeedValue = listing_Standard.Slider(SpeedValue, 25f, 35f);
-            listing_Standard.Gap();
-            listing_Standard.Label("FExt.RadiusValue".Translate() + "  " + RadiusValue);
-            RadiusValue = Math.Round(listing_Standard.Slider((float)RadiusValue, 1f, 4f), 2);
-            listing_Standard.Gap();
-            listing_Standard.CheckboxLabeled("FExt.UseCleanFoam".Translate(), ref UseCleanFoam);
-            listing_Standard.Gap();
-            listing_Standard.Label("FExt.DryOutTime".Translate() + "  " + DryOutTime);
-            DryOutTime = (int)listing_Standard.Slider(DryOutTime, 3f, 8f);
-            listing_Standard.Gap();
+            listingStandard.Label("FExt.RangeValue".Translate() + "  " + (int)RangeValue);
+            RangeValue = listingStandard.Slider(RangeValue, 3f, 16f);
+            listingStandard.Gap();
+            listingStandard.Label("FExt.BurstValue".Translate() + "  " + (int)BurstValue);
+            BurstValue = listingStandard.Slider(BurstValue, 1f, 4f);
+            listingStandard.Gap();
+            listingStandard.Label("FExt.SpeedValue".Translate() + "  " + (int)SpeedValue);
+            SpeedValue = listingStandard.Slider(SpeedValue, 25f, 35f);
+            listingStandard.Gap();
+            listingStandard.Label("FExt.RadiusValue".Translate() + "  " + RadiusValue);
+            RadiusValue = Math.Round(listingStandard.Slider((float)RadiusValue, 1f, 4f), 2);
+            listingStandard.Gap();
+            listingStandard.CheckboxLabeled("FExt.UseCleanFoam".Translate(), ref UseCleanFoam);
+            listingStandard.Gap();
+            listingStandard.Label("FExt.DryOutTime".Translate() + "  " + DryOutTime);
+            DryOutTime = (int)listingStandard.Slider(DryOutTime, 3f, 8f);
+            listingStandard.Gap();
             Text.Font = GameFont.Tiny;
-            listing_Standard.Label("          " + "FExt.GeneralValueTip".Translate());
+            listingStandard.Label("          " + "FExt.GeneralValueTip".Translate());
             Text.Font = GameFont.Small;
-            if (Controller.currentVersion != null)
+            if (Controller.CurrentVersion != null)
             {
-                listing_Standard.Gap();
+                listingStandard.Gap();
                 GUI.contentColor = Color.gray;
-                listing_Standard.Label("FExt.CurrentModVersion".Translate(Controller.currentVersion));
+                listingStandard.Label("FExt.CurrentModVersion".Translate(Controller.CurrentVersion));
                 GUI.contentColor = Color.white;
             }
 
-            listing_Standard.End();
+            listingStandard.End();
         }
     }
 

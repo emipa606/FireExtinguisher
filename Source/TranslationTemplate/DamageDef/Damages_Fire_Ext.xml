@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: extinguish -->
+  <FExtExtinguish.label>extinguish</FExtExtinguish.label>
+  <!-- EN: {0} has been killed. -->
+  <FExtExtinguish.deathMessage>{0} has been killed.</FExtExtinguish.deathMessage>
+</LanguageData>

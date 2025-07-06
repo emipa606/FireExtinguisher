@@ -10,23 +10,23 @@ internal static class FExt_Options_Initializer
 
     private static bool foamChecked;
 
-    private static bool foamCheckedCE;
+    private static bool foamCheckedCe;
 
     static FExt_Options_Initializer()
     {
-        LongEventHandler.QueueLongEvent(Setup, "LibraryStartup", false, null);
+        LongEventHandler.QueueLongEvent(setup, "LibraryStartup", false, null);
     }
 
-    private static bool IsCELoaded()
+    private static bool isCeLoaded()
     {
         return ModLister.HasActiveModWithName("Combat Extended");
     }
 
-    private static void Setup()
+    private static void setup()
     {
-        if (!IsCELoaded())
+        if (!isCeLoaded())
         {
-            foamCheckedCE = true;
+            foamCheckedCe = true;
         }
 
         var allDefsListForReading = DefDatabase<ThingDef>.AllDefsListForReading;
@@ -69,7 +69,7 @@ internal static class FExt_Options_Initializer
                     foamChecked = true;
                 }
 
-                if (!foamCheckedCE)
+                if (!foamCheckedCe)
                 {
                     if (allDefsListForReading[i].defName == "Bullet_FireExtFoamCE")
                     {
@@ -79,11 +79,11 @@ internal static class FExt_Options_Initializer
                         var useCleanFoam2 = Controller.Settings.UseCleanFoam;
                         allDefsListForReading[i].projectile.postExplosionSpawnThingDef =
                             DefDatabase<ThingDef>.GetNamed(useCleanFoam2 ? "Filth_FExtFireFoam" : "Filth_FireFoam");
-                        foamCheckedCE = true;
+                        foamCheckedCe = true;
                     }
                 }
 
-                if (extChecked && foamChecked && foamCheckedCE)
+                if (extChecked && foamChecked && foamCheckedCe)
                 {
                     i = allDefsListForReading.Count;
                 }

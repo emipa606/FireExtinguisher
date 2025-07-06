@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: FE Mini-turret Foam -->
+  <Bullet_FE_MiniTurret.label>FE Mini-turret Foam</Bullet_FE_MiniTurret.label>
+  <!-- EN: FE Mini-turret gun -->
+  <Gun_FE_MiniTurret.label>FE Mini-turret gun</Gun_FE_MiniTurret.label>
+  <!-- EN: A automatic FE projectile foam launcher made to be mounted on a turret. -->
+  <Gun_FE_MiniTurret.description>A automatic FE projectile foam launcher made to be mounted on a turret.</Gun_FE_MiniTurret.description>
+  <!-- EN: FE Mini-turret gun -->
+  <Gun_FE_MiniTurret.verbs.Verb_Shoot.label>FE Mini-turret gun</Gun_FE_MiniTurret.verbs.Verb_Shoot.label>
+  <!-- EN: FE Mini-turret -->
+  <Turret_MiniTurret_FE.label>FE Mini-turret</Turret_MiniTurret_FE.label>
+  <!-- EN: A mini-turret that fights fires. -->
+  <Turret_MiniTurret_FE.description>A mini-turret that fights fires.</Turret_MiniTurret_FE.description>
+  <!-- EN: Barrel durability -->
+  <Turret_MiniTurret_FE.comps.CompRefuelable.fuelGizmoLabel>Barrel durability</Turret_MiniTurret_FE.comps.CompRefuelable.fuelGizmoLabel>
+  <!-- EN: Shots until barrel change -->
+  <Turret_MiniTurret_FE.comps.CompRefuelable.fuelLabel>Shots until barrel change</Turret_MiniTurret_FE.comps.CompRefuelable.fuelLabel>
+  <!-- EN: Cannot shoot: Needs new FE -->
+  <Turret_MiniTurret_FE.comps.CompRefuelable.outOfFuelMessage>Cannot shoot: Needs new FE</Turret_MiniTurret_FE.comps.CompRefuelable.outOfFuelMessage>
+</LanguageData>

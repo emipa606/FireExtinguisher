@@ -3,8 +3,9 @@ using Verse;
 
 namespace FireExt;
 
-[HarmonyPatch(typeof(ShotReport), nameof(ShotReport.HitFactorFromShooter), typeof(Thing), typeof(float))]
-public class ShotReport_HitFactorFromShooter_Prefix
+[HarmonyPatch(typeof(ShotReport), nameof(ShotReport.HitFactorFromShooter), typeof(Thing), typeof(float),
+    typeof(float?))]
+public class ShotReport_HitFactorFromShooter
 {
     [HarmonyPostfix]
     public static bool Prefix(Thing caster, ref float __result)

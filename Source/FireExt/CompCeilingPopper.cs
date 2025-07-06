@@ -21,8 +21,8 @@ public class CompCeilingPopper : ThingComp
             return;
         }
 
-        var SInfo = SoundInfo.InMap(parent);
-        SoundDefOf.Roof_Collapse.PlayOneShot(SInfo);
+        var sInfo = SoundInfo.InMap(parent);
+        SoundDefOf.Roof_Collapse.PlayOneShot(sInfo);
         FilthMaker.TryMakeFilth(parent.Position, parent.Map, ThingDefOf.Filth_RubbleBuilding);
         parent.Destroy();
     }

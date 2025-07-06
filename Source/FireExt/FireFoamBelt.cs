@@ -31,18 +31,18 @@ public class FireFoamBelt : Apparel
             defaultLabel = text,
             defaultDesc = desc,
             icon = def.uiIcon,
-            action = delegate { DoFFoam(Wearer, this); }
+            action = delegate { doFFoam(Wearer, this); }
         };
     }
 
-    private void DoFFoam(Pawn p, Thing t)
+    private void doFFoam(Pawn p, Thing t)
     {
         var list = new List<FloatMenuOption>();
         string text = "FFoamBelt.DoNothing".Translate();
-        list.Add(new FloatMenuOption(text, delegate { FFoamBeltUse(p, t, false); }, MenuOptionPriority.Default,
+        list.Add(new FloatMenuOption(text, delegate { fFoamBeltUse(p, t, false); }, MenuOptionPriority.Default,
             null, null, 29f));
         text = "FFoamBelt.Activate".Translate(def.label.CapitalizeFirst());
-        list.Add(new FloatMenuOption(text, delegate { FFoamBeltUse(p, t, true); }, MenuOptionPriority.Default, null,
+        list.Add(new FloatMenuOption(text, delegate { fFoamBeltUse(p, t, true); }, MenuOptionPriority.Default, null,
             null, 29f, rect => Widgets.InfoCardButton(rect.x + 5f, rect.y + ((rect.height - 24f) / 2f), def)));
         Find.WindowStack.Add(new FloatMenu(list));
     }
@@ -61,7 +61,7 @@ public class FireFoamBelt : Apparel
         Scribe_Values.Look(ref FoamRadius, "FoamRadius", 5f);
     }
 
-    private void FFoamBeltUse(Pawn p, Thing t, bool Using)
+    private void fFoamBeltUse(Pawn p, Thing t, bool Using)
     {
         if (!Using || p == null)
         {
@@ -70,28 +70,28 @@ public class FireFoamBelt : Apparel
 
         if (def.defName == "FireFoam_Belt")
         {
-            ChkFFoamBelt(p, t, out var Reason, out var Passed);
-            if (Passed)
+            chkFFoamBelt(p, t, out var reason, out var passed);
+            if (passed)
             {
-                DoFFoamBeltPop(p, this);
+                doFFoamBeltPop(p, this);
             }
             else
             {
-                string Msg = "FFoamBelt.ReasonPrefix".Translate(def.label.CapitalizeFirst()) + Reason;
-                Messages.Message(Msg, p, MessageTypeDefOf.NeutralEvent, false);
+                string msg = "FFoamBelt.ReasonPrefix".Translate(def.label.CapitalizeFirst()) + reason;
+                Messages.Message(msg, p, MessageTypeDefOf.NeutralEvent, false);
             }
         }
         else
         {
-            var ErrMsg = string.Concat("ERR: FFoam belt item def not found for ", def.label.CapitalizeFirst(),
+            var errMsg = string.Concat("ERR: FFoam belt item def not found for ", def.label.CapitalizeFirst(),
                 " : (", def.defName, ")");
-            Log.Message(ErrMsg);
+            Log.Message(errMsg);
         }
     }
 
-    private static void ChkFFoamBelt(Pawn p, Thing t, out string Reason, out bool Passed)
+    private static void chkFFoamBelt(Pawn p, Thing t, out string reason, out bool passed)
     {
-        Reason = null;
+        reason = null;
         if (p?.Map != null)
         {
             var close = false;
@@ -112,42 +112,42 @@ public class FireFoamBelt : Apparel
 
             if (!close)
             {
-                Passed = false;
-                Reason = "FFoamBelt.NoCloseFire".Translate(p.LabelShort.CapitalizeFirst());
+                passed = false;
+                reason = "FFoamBelt.NoCloseFire".Translate(p.LabelShort.CapitalizeFirst());
             }
             else
             {
-                Passed = true;
+                passed = true;
             }
         }
         else
         {
-            Passed = false;
-            Reason = "FFoamBelt.NoValidMap".Translate(p?.LabelShort.CapitalizeFirst());
+            passed = false;
+            reason = "FFoamBelt.NoValidMap".Translate(p?.LabelShort.CapitalizeFirst());
         }
     }
 
-    public override void Tick()
+    protected override void Tick()
     {
         base.Tick();
         if (Wearer != null)
         {
             if (Wearer.IsBurning())
             {
-                DoFFoamBeltPop(Wearer, this);
+                doFFoamBeltPop(Wearer, this);
             }
         }
         else
         {
             if (this.IsBurning())
             {
-                DoFFoamBeltPop(null, this);
+                doFFoamBeltPop(null, this);
             }
         }
     }
 
 
-    private static void DoFFoamBeltPop(Pawn p, Thing t)
+    private static void doFFoamBeltPop(Pawn p, Thing t)
     {
         Map map = null;
         var origin = default(IntVec3);
@@ -171,17 +171,10 @@ public class FireFoamBelt : Apparel
         if (map != null)
         {
             var radius = ((FireFoamBelt)t).FoamRadius;
-            var DmgType = DefDatabase<DamageDef>.GetNamed("FExtExtinguish", false);
-            if (DmgType == null)
-            {
-                DmgType = DamageDefOf.Extinguish;
-            }
+            var DmgType = DefDatabase<DamageDef>.GetNamed("FExtExtinguish", false) ?? DamageDefOf.Extinguish;
 
-            var postSpawnThingDef = DefDatabase<ThingDef>.GetNamed("Filth_FExtFireFoam", false);
-            if (postSpawnThingDef == null)
-            {
-                postSpawnThingDef = ThingDefOf.Filth_FireFoam;
-            }
+            var postSpawnThingDef =
+                DefDatabase<ThingDef>.GetNamed("Filth_FExtFireFoam", false) ?? ThingDefOf.Filth_FireFoam;
 
             GenExplosion.DoExplosion(origin, map, radius, DmgType, t, -1, -1f, null, null, null, null,
                 postSpawnThingDef, 1f, 3);
