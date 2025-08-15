@@ -26,4 +26,5 @@
   <FFoamBelt.NotBurning>{0} brennt nicht.</FFoamBelt.NotBurning>
   <FFoamBelt.NoCloseFire>{0} ist nicht nah genug an einem Feuer.</FFoamBelt.NoCloseFire>
   <FFoamBelt.NoValidMap>{0} wird nicht auf einer Karte gespawnt.</FFoamBelt.NoValidMap>
+  <!--  Fire Foam Belt -->
 </LanguageData>

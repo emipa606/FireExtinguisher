@@ -26,4 +26,5 @@
   <FFoamBelt.NotBurning>{0}没有燃烧。</FFoamBelt.NotBurning>
   <FFoamBelt.NoCloseFire>{0}离火场不够近。</FFoamBelt.NoCloseFire>
   <FFoamBelt.NoValidMap>{0}没有在地图上产卵。</FFoamBelt.NoValidMap>
+  <!--  Fire Foam Belt -->
 </LanguageData>

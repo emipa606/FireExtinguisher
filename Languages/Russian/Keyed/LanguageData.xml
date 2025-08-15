@@ -26,4 +26,5 @@
   <FFoamBelt.NotBurning>{0} не горит.</FFoamBelt.NotBurning>
   <FFoamBelt.NoCloseFire>{0} находится недостаточно близко к огню.</FFoamBelt.NoCloseFire>
   <FFoamBelt.NoValidMap>{0} не порожден на карте.</FFoamBelt.NoValidMap>
+  <!--  Fire Foam Belt -->
 </LanguageData>

@@ -61,6 +61,7 @@
         <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
+          <canTargetFires>true</canTargetFires>
         </targetParams>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
