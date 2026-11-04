@@ -69,18 +69,15 @@ internal static class FExt_Options_Initializer
                     foamChecked = true;
                 }
 
-                if (!foamCheckedCe)
+                if (!foamCheckedCe && allDefsListForReading[i].defName == "Bullet_FireExtFoamCE")
                 {
-                    if (allDefsListForReading[i].defName == "Bullet_FireExtFoamCE")
-                    {
-                        allDefsListForReading[i].projectile.speed = (int)Controller.Settings.SpeedValue;
-                        allDefsListForReading[i].projectile.explosionRadius =
-                            (float)Controller.Settings.RadiusValue;
-                        var useCleanFoam2 = Controller.Settings.UseCleanFoam;
-                        allDefsListForReading[i].projectile.postExplosionSpawnThingDef =
-                            DefDatabase<ThingDef>.GetNamed(useCleanFoam2 ? "Filth_FExtFireFoam" : "Filth_FireFoam");
-                        foamCheckedCe = true;
-                    }
+                    allDefsListForReading[i].projectile.speed = (int)Controller.Settings.SpeedValue;
+                    allDefsListForReading[i].projectile.explosionRadius =
+                        (float)Controller.Settings.RadiusValue;
+                    var useCleanFoam2 = Controller.Settings.UseCleanFoam;
+                    allDefsListForReading[i].projectile.postExplosionSpawnThingDef =
+                        DefDatabase<ThingDef>.GetNamed(useCleanFoam2 ? "Filth_FExtFireFoam" : "Filth_FireFoam");
+                    foamCheckedCe = true;
                 }
 
                 if (extChecked && foamChecked && foamCheckedCe)

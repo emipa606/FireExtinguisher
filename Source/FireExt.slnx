@@ -3,4 +3,24 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="FireExt/FireExt.csproj" />
+  <Folder Name="/.github/">
+    <File Path="../.github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/">
+    <File Path="../1.7/Defs/Buildings_Fire_Ext.xml" />
+    <File Path="../1.7/Defs/Damages_Fire_Ext.xml" />
+    <File Path="../1.7/Defs/FireFoam_Belt.xml" />
+    <File Path="../1.7/Defs/ResearchProject_Fire_Ext.xml" />
+    <File Path="../1.7/Defs/Turret_Fire_Ext.xml" />
+    <File Path="../1.7/Defs/Weapons_Fire_Ext.xml" />
+  </Folder>
+  <Folder Name="/XML/Patches/">
+    <File Path="../Patches/Patches_LTS_Ammo.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/LanguageData.xml" />
+  </Folder>
 </Solution>

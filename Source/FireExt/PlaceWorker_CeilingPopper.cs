@@ -36,12 +36,9 @@ public class PlaceWorker_CeilingPopper : PlaceWorker
             }
 
             var def = thingy.def;
-            if (def?.entityDefToBuild != null)
+            if (def?.entityDefToBuild != null && thingy.def.entityDefToBuild == checkingDef)
             {
-                if (thingy.def.entityDefToBuild == checkingDef)
-                {
-                    return false;
-                }
+                return false;
             }
 
             var isDoor = thingy.def.IsDoor;

@@ -6,7 +6,7 @@ namespace FireExt;
 
 [HarmonyPatch(typeof(Building_TurretGun), nameof(Building_TurretGun.TryFindNewTarget))]
 [HarmonyPriority(800)]
-public class Building_TurretGun_TryFindNewTarget
+public static class Building_TurretGun_TryFindNewTarget
 {
     public static bool Prefix(ref Building_TurretGun __instance, ref LocalTargetInfo __result)
     {

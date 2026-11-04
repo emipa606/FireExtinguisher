@@ -5,7 +5,7 @@ using Verse;
 
 namespace FireExt;
 
-public class FETargetUtility
+public static class FETargetUtility
 {
     internal static Thing GetFeTarget(Building_TurretGun btg, float range)
     {
